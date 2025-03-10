@@ -7,6 +7,190 @@
   pointer-events: none;
 }
 
+.container {
+  max-width: 1204px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  font-style: italic;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+}
+
+.dropdown li {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.dropdown li:hover {
+  background: #f0f0f0;
+}
+
+.user-detail {
+  flex-grow: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(10px);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.user-detail h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.bio {
+  font-style: italic;
+  color: #555;
+}
+
+.followers {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.repo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.repo-list li {
+  background: #f4f4f4;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.repo-list a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo-list a:hover {
+  text-decoration: underline;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-left-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
